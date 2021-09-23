@@ -13,7 +13,8 @@ def show_value(value_id: str):
     value_obj = helper.fetch_value(value_id)
     if value_obj is None:
         abort(404)
-    return render_template('value.html', value_id=value_id, value=value_obj[1])
+    p_tag = '<p> %s </p>' % value_obj[1]
+    return render_template('value.html', value_id=value_id, value=p_tag)
 
 @app.route('/search', methods=['GET'])
 def search():

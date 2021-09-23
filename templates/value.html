@@ -3,6 +3,8 @@
 {% block title %} Value Page {% endblock %}
 
 {% block content %}
-    <h1>Value for {{ value_id }} is :</h1>
-    {{ value }}
+    {% autoescape false %}
+        <h1>Value for {{ value_id }} is :</h1>
+        {{ value }}
+    {% endautoescape %}
 {% endblock %}
