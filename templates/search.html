@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Search Page {% endblock %}
+
+{% block content %}
+        <h1>You searched for:</h1>
+        <div id="search-div"> </div>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
